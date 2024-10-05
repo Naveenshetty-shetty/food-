@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+h1, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header Styles */
+header {
+    background-color: #2ea1c4;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-display: flex;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 15px;
+    backdrop-filter: blur(30px);
+    box-shadow: none;
+    border: 2px solid rgba(255, 255,238, 0.18);
+}
+
+nav a {
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ff6f61;
+}
+
+/* Flexbox Container for Menu Items */
+.container {
+    display: flex;
+    flex-direction: row; /* Items aligned in a row */
+    justify-content: space-between; /* Space between each item */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: nowrap; /* Prevents wrapping */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    margin: 40px auto;
+    max-width: 100%; /* Full width of the container */
+    padding: 0 20px;
+}
+
+/* Flexbox Menu Items (Row Layout) */
+.menu-item {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    min-width: 23%; /* Set a minimum width */
+    margin: 0 20px; /* Space between each item */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item img {
+    height: 500%;
+    width: 75%;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    font-size: 1.1em;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* Add to Cart Button */
+.menu-item button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item button:hover {
+    background-color: #e65a50;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .menu-item {
+        min-width: 100%; /* Make items full width on small screens */
+        margin: 10px 0;
+    }
+}
